@@ -1,0 +1,5 @@
+IP: 130.193.34.93;
+name_taski: https://warrantytasks.zapto.org;
+name_kittygram: https://kittygramproject.read-books.org;
+login: kittygram_admin;
+password: SInu9Yf!;
