@@ -1,9 +1,13 @@
 import os
+import environ
 from pathlib import Path
+
+env = environ.Env()
+environ.Env.read_env()
 
 BASE_DIR = Path(__file__).resolve().parent.parent
 
-SECRET_KEY = os.getenv('SECRET_KEY')
+SECRET_KEY = env.str('SECRET_KEY', default='SECRET KEY DEFAULT')
 
 DEBUG = False
 
@@ -94,7 +98,7 @@ STATIC_URL = '/static_backend/'
 STATIC_ROOT = BASE_DIR / 'static_backend' 
 
 MEDIA_URL = '/media/'
-MEDIA_ROOT = BASE_DIR / 'var/www/kittygram/media'
+MEDIA_ROOT = BASE_DIR / 'var/www/kittygram/media/'
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
