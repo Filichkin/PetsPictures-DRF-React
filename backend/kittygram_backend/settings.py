@@ -1,13 +1,11 @@
 import os
-import environ
+
 from pathlib import Path
 
-env = environ.Env()
-environ.Env.read_env()
 
 BASE_DIR = Path(__file__).resolve().parent.parent
 
-SECRET_KEY = env.str('SECRET_KEY', default='SECRET KEY DEFAULT')
+SECRET_KEY = os.getenv('SECRET_KEY')
 
 DEBUG = False
 
